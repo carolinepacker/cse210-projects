@@ -2,8 +2,40 @@ using System;
 
 class Program
 {
+    static Journal journal = new Journal();
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Develop02 World!");
+        string choice = "0";
+        while (choice != "5")
+        {
+            DisplayMenu();
+            choice = Console.ReadLine();
+            switch (choice)
+            {
+                case "1":
+                    journal.AddEntry();
+                    break;
+                case "2":
+                    journal.DisplayEntries();
+                    break;
+                case "3":
+                    
+                    break;
+                case "4":
+
+                    break;
+                case "5":
+                    break;
+            }
+        }
+    }
+
+    static void DisplayMenu()
+    {
+        Console.WriteLine("1. Add Entry");
+        Console.WriteLine("2. Display Entries");
+        Console.WriteLine("3. Save Journal");
+        Console.WriteLine("4. Load Journal");
+        Console.WriteLine("5. Exit");
     }
 }
