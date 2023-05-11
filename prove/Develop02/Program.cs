@@ -19,10 +19,10 @@ class Program
                     journal.DisplayEntries();
                     break;
                 case "3":
-                    
+                    journal.SaveFile(journal._entries);
                     break;
                 case "4":
-
+                    journal.LoadFile();
                     break;
                 case "5":
                     break;
@@ -38,4 +38,6 @@ class Program
         Console.WriteLine("4. Load Journal");
         Console.WriteLine("5. Exit");
     }
+
+    
 }
